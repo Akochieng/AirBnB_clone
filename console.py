@@ -7,11 +7,11 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 from models import storage
-from cmd import Cmd
+import cmd
 '''a commandline interface for the app'''
 
 
-class HBNBCommand(Cmd):
+class HBNBCommand(Cmd.Cmd):
     '''defines an object for the commandline interface of the web app
 
     Attributes:
