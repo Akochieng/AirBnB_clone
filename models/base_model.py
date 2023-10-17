@@ -23,10 +23,9 @@ class BaseModel():
             kwargs: key word arguments of the method.
         '''
         if len(kwargs.keys()) == 0:
-            now = datetime.now().isoformat()
             self.id = str(uuid.uuid4())
-            self.created_at = now
-            self.updated_at = now
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
             storage.new(self)
         else:
             for k, v in kwargs.items():
@@ -39,12 +38,14 @@ class BaseModel():
 
     def save(self):
         '''saves an instance of the class to the json storage'''
-        now = datetime.now().isoformat()
-        self.updated_at = now
+        self.updated_at = datetime.now()
         storage.save()
 
     def to_dict(self):
         '''returns a dictionary representation of the object'''
         myval = self.__dict__
+        updated_at = myval.get('updated_at')
+        created_at = myval.get('created_at')
+        myval.update({'updated_at': updated_at.isoformat(), 'created_at': created_at.isoformat()})
         myval.update({"__class__": self.__class__.__name__})
         return myval
