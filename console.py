@@ -11,7 +11,7 @@ import cmd
 '''a commandline interface for the app'''
 
 
-class HBNBCommand(Cmd.Cmd):
+class HBNBCommand(cmd.Cmd):
     '''defines an object for the commandline interface of the web app
 
     Attributes:

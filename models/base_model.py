@@ -39,13 +39,15 @@ class BaseModel():
     def save(self):
         '''saves an instance of the class to the json storage'''
         self.updated_at = datetime.now()
+        storage.new(self)
         storage.save()
 
     def to_dict(self):
         '''returns a dictionary representation of the object'''
-        myval = self.__dict__
-        updated_at = myval.get('updated_at')
-        created_at = myval.get('created_at')
-        myval.update({'updated_at': updated_at.isoformat(), 'created_at': created_at.isoformat()})
+        myval = self.__dict__.copy()
+        created = myval.get('created_at')
+        updated = myval.get('updated_at')
+        myval.update({'created_at': created.isoformat()})
+        myval.update({'updated_at': updated.isoformat()})
         myval.update({"__class__": self.__class__.__name__})
         return myval
