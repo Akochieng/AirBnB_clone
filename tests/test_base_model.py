@@ -15,14 +15,19 @@ class TestBase(TestCase):
         del self.basetwo
 
     def test_init(self):
+        self.assertIsInstance(self.basetwo.id, str)
         self.assertIsInstance(self.baseone.id, str)
-        self.assertEqual(len(self.baseone.id), 36)
         self.assertIsInstance(self.baseone.created_at, datetime)
         self.assertIsInstance(self.baseone.updated_at, datetime)
-        self.assertIsInstance(self.basetwo.id, str)
-        self.assertEqual(len(self.basetwo.id), 36)
         self.assertIsInstance(self.basetwo.created_at, datetime)
         self.assertIsInstance(self.basetwo.updated_at, datetime)
+
+    def test_times(self):
+        pass
+
+    def test_id(self):
+        self.assertEqual(len(self.baseone.id), 36)
+        self.assertEqual(len(self.basetwo.id), 36)
 
     def test_save(self):
         self.baseone.save()
