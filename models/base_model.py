@@ -34,7 +34,7 @@ class BaseModel():
 
     def __str__(self):
         '''returns the string representation of the class'''
-        return f"[{self.__class__.__name__}] ({self.id}) <{self.__dict__}"
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
         '''saves an instance of the class to the json storage'''

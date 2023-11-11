@@ -17,5 +17,5 @@ class User(BaseModel):
         super().__init__()
         self.first_name = ""
         self.last_name = ""
-        email = ""
-        password = ""
+        self.email = ""
+        self.password = ""

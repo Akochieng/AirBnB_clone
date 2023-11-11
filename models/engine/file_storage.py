@@ -14,7 +14,7 @@ class FileStorage():
     def __init__(self):
         '''initialises the class'''
 
-        self.__file_path = "file2.json"
+        self.__file_path = "file.json"
         self.__objects = {}
 
     def all(self):
