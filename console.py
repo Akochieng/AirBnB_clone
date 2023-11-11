@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+'''A commandline interface for the app
+
+    This simple commandline application supports basic commands
+    such as create, all, show, update and destroy which can be
+    used to perform basic operations on the app backend.
+'''
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
@@ -8,7 +14,6 @@ from models.place import Place
 from models.review import Review
 from models import storage
 import cmd
-'''a commandline interface for the app'''
 
 
 class HBNBCommand(cmd.Cmd):
