@@ -6,7 +6,7 @@ from tests.test_models.test_city import TestCity
 from tests.test_models.test_user import TestUser
 from tests.test_models.test_review import TestReview
 from tests.test_models.test_state import TestState
-
+from tests.test_models.test_engine.test_file_storage import FileStorage
 
 
 if __name__ == "__main__":
