@@ -13,7 +13,7 @@ class TestFileStorage(TestCase):
         del self.b
 
     def test_init(self):
-        self.assertTrue(hasattr(self.a, "__file_path"))
-        self.assertTrue(hasattr(self.b, "__file_path"))
-        self.assertTrue(hasattr(self.a, "__objects"))
-        self.assertTrue(hasattr(self.b, "__objects"))
+        self.assertTrue(hasattr(self.a, "_FileStorage__file_path"))
+        self.assertTrue(hasattr(self.b, "_FileStorage__file_path"))
+        self.assertTrue(hasattr(self.a, "_FileStorage__objects"))
+        self.assertTrue(hasattr(self.b, "_FileStorage__objects"))
