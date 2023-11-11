@@ -15,12 +15,12 @@ class TestReview(TestCase):
         self.assertTrue(hasattr(self.a, "text"))
         self.assertTrue(hasattr(self.b, "text"))
         self.assertTrue(hasattr(self.a, "place_id"))
-        self.assertTrue(hasattr(self.a, "place_id"))
-        self.assertTrue(hasattr(self.b, "user_id"))
+        self.assertTrue(hasattr(self.b, "place_id"))
+        self.assertTrue(hasattr(self.a, "user_id"))
         self.assertTrue(hasattr(self.b, "user_id"))
 
     def test_val(self):
         self.a.place_id = "Hospital"
-        self.b.user_id = "Swimming Pool"
+        self.b.place_id = "Swimming Pool"
         self.assertEqual(self.a.place_id, "Hospital")
-        self.assertEqual(self.b.user_id, "Swimming Pool")
+        self.assertEqual(self.b.place_id, "Swimming Pool")

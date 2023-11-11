@@ -14,6 +14,9 @@ class TestAmenity(TestCase):
     def test_init(self):
         self.assertTrue(hasattr(self.a, "name"))
         self.assertTrue(hasattr(self.b, "name"))
+        self.assertTrue(hasattr(self.b, "id"))
+        self.assertTrue(hasattr(self.b, "created_at"))
+        self.assertTrue(hasattr(self.b, "updated_at"))
 
     def test_val(self):
         self.a.name = "Hospital"
