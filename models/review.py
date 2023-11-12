@@ -11,9 +11,9 @@ class Review(BaseModel):
     user_id (str): the id of the user
     text (str): the review from the user
     '''
+    place_id = ""
+    user_id = ""
+    text = ""
     def __init__(self):
         '''initialises a review instance using default values'''
         super().__init__()
-        self.place_id = ""
-        self.user_id = ""
-        self.text = ""

@@ -9,7 +9,7 @@ class Amenity(BaseModel):
     Attributes:
     name: string that loosely identifies an instance
     '''
+    name = ""
     def __init__(self):
         super().__init__()
         '''initialises Amenity using base model default values'''
-        self.name = ""

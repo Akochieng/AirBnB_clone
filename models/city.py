@@ -10,8 +10,8 @@ class City(BaseModel):
     state_id (str): unique identifier of a city. It will be the state.id
     name (str): the name of the city
     '''
+    state_id = ""
+    name = ""
     def __init__(self):
         '''initialises the city instance using default attr only'''
         super().__init__()
-        self.state_id = ""
-        self.name = ""

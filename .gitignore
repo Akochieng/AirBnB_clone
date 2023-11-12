@@ -1,1 +1,9 @@
-.cpython-310.pyc
+#ignore python bytecode
+*.pyc
+
+#ignore pycache directory
+__pycache__/
+
+#ignore temporary files
+*.swp
+*~

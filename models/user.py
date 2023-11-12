@@ -12,10 +12,10 @@ class User(BaseModel):
     email (str): the user's email
     password (str): the user's password
     '''
+    first_name = ""
+    last_name = ""
+    email = ""
+    password = ""
     def __init__(self):
         '''initialises a user instance using default arguments'''
         super().__init__()
-        self.first_name = ""
-        self.last_name = ""
-        self.email = ""
-        self.password = ""
