@@ -14,6 +14,8 @@ class TestCity(TestCase):
     def test_init(self):
         self.assertTrue(hasattr(self.a, "name"))
         self.assertTrue(hasattr(self.b, "name"))
+        self.assertEqual(self.a.name, "")
+        self.assertEqual(self.b.name, "")
         self.assertTrue(hasattr(self.a, "state_id"))
         self.assertTrue(hasattr(self.b, "state_id"))
         self.assertTrue(hasattr(self.a, "id"))

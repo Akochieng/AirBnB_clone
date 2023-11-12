@@ -14,6 +14,8 @@ class TestReview(TestCase):
     def test_init(self):
         self.assertTrue(hasattr(self.a, "text"))
         self.assertTrue(hasattr(self.b, "text"))
+        self.assertEqual(self.a.text, "")
+        self.assertEqual(self.b.text, "")
         self.assertTrue(hasattr(self.a, "place_id"))
         self.assertTrue(hasattr(self.b, "place_id"))
         self.assertTrue(hasattr(self.a, "user_id"))
