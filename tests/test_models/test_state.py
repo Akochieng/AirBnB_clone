@@ -14,6 +14,8 @@ class TestState(TestCase):
     def test_init(self):
         self.assertTrue(hasattr(self.statea, "name"))
         self.assertTrue(hasattr(self.stateb, "name"))
+        self.assertEqual(self.statea, "")
+        self.assertEqual(self.stateb, "")
 
     def test_val(self):
         self.statea.name = "Kenya"
